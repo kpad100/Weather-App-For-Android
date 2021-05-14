@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         protected Void doInBackground(Void... params) {
 
             try {
-                URL forecastURL = new URL("http://api.openweathermap.org/data/2.5/forecast?zip="+zip+"&APPID=cb20b40421444ab2a3cb868244a264a8");
+                URL forecastURL = new URL("http://api.openweathermap.org/data/2.5/forecast?zip="+zip+"&APPID=INSERT_API_KEY_HERE");
                 URLConnection connection = forecastURL.openConnection();
                 BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                 forecast = new JSONObject(reader.readLine());
